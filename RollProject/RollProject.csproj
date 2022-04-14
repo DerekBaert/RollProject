@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04D5DC94-C631-4930-A9C6-734B91C3754D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RollProject</RootNamespace>
+    <AssemblyName>RollProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44365</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArrowsController.cs" />
+    <Compile Include="Controllers\CommonsController.cs" />
+    <Compile Include="Controllers\FigurinesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IounStonesController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\LegendariesController.cs" />
+    <Compile Include="Controllers\MagicItemsController.cs" />
+    <Compile Include="Controllers\PotionsController.cs" />
+    <Compile Include="Controllers\RaresController.cs" />
+    <Compile Include="Controllers\RaritiesController.cs" />
+    <Compile Include="Controllers\UncommonsController.cs" />
+    <Compile Include="Controllers\VeryRaresController.cs" />
+    <Compile Include="Controllers\WandsController.cs" />
+    <Compile Include="Controllers\WeaponOilsController.cs" />
+    <Compile Include="Data\RollProjectContext.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105080207186_InitialCreate.cs" />
+    <Compile Include="Migrations\202105080207186_InitialCreate.Designer.cs">
+      <DependentUpon>202105080207186_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105091516158_MagicItemAddition.cs" />
+    <Compile Include="Migrations\202105091516158_MagicItemAddition.Designer.cs">
+      <DependentUpon>202105091516158_MagicItemAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105091950087_DisplayNameAddition.cs" />
+    <Compile Include="Migrations\202105091950087_DisplayNameAddition.Designer.cs">
+      <DependentUpon>202105091950087_DisplayNameAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105110223592_RarityName.cs" />
+    <Compile Include="Migrations\202105110223592_RarityName.Designer.cs">
+      <DependentUpon>202105110223592_RarityName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105110224481_RarityName1.cs" />
+    <Compile Include="Migrations\202105110224481_RarityName1.Designer.cs">
+      <DependentUpon>202105110224481_RarityName1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105110338013_NameFix.cs" />
+    <Compile Include="Migrations\202105110338013_NameFix.Designer.cs">
+      <DependentUpon>202105110338013_NameFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105110343275_NameFixTwo-ConstructorAdded.cs" />
+    <Compile Include="Migrations\202105110343275_NameFixTwo-ConstructorAdded.Designer.cs">
+      <DependentUpon>202105110343275_NameFixTwo-ConstructorAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105110348425_NameFixes-AllItems.cs" />
+    <Compile Include="Migrations\202105110348425_NameFixes-AllItems.Designer.cs">
+      <DependentUpon>202105110348425_NameFixes-AllItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105120320380_RarityNameAdd.cs" />
+    <Compile Include="Migrations\202105120320380_RarityNameAdd.Designer.cs">
+      <DependentUpon>202105120320380_RarityNameAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105150416278_TypeFix.cs" />
+    <Compile Include="Migrations\202105150416278_TypeFix.Designer.cs">
+      <DependentUpon>202105150416278_TypeFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105161522387_AddNotes.cs" />
+    <Compile Include="Migrations\202105161522387_AddNotes.Designer.cs">
+      <DependentUpon>202105161522387_AddNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ItemModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Arrows\Create.cshtml" />
+    <Content Include="Views\Arrows\Delete.cshtml" />
+    <Content Include="Views\Arrows\Details.cshtml" />
+    <Content Include="Views\Arrows\Edit.cshtml" />
+    <Content Include="Views\Arrows\Index.cshtml" />
+    <Content Include="Views\Commons\Delete.cshtml" />
+    <Content Include="Views\Commons\Details.cshtml" />
+    <Content Include="Views\Commons\Edit.cshtml" />
+    <Content Include="Views\Figurines\Create.cshtml" />
+    <Content Include="Views\Figurines\Delete.cshtml" />
+    <Content Include="Views\Figurines\Details.cshtml" />
+    <Content Include="Views\Figurines\Edit.cshtml" />
+    <Content Include="Views\Figurines\Index.cshtml" />
+    <Content Include="Views\IounStones\Create.cshtml" />
+    <Content Include="Views\IounStones\Delete.cshtml" />
+    <Content Include="Views\IounStones\Details.cshtml" />
+    <Content Include="Views\IounStones\Edit.cshtml" />
+    <Content Include="Views\IounStones\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Legendaries\Delete.cshtml" />
+    <Content Include="Views\Legendaries\Details.cshtml" />
+    <Content Include="Views\Legendaries\Edit.cshtml" />
+    <Content Include="Views\Potions\Create.cshtml" />
+    <Content Include="Views\Potions\Delete.cshtml" />
+    <Content Include="Views\Potions\Details.cshtml" />
+    <Content Include="Views\Potions\Edit.cshtml" />
+    <Content Include="Views\Potions\Index.cshtml" />
+    <Content Include="Views\Rares\Delete.cshtml" />
+    <Content Include="Views\Rares\Details.cshtml" />
+    <Content Include="Views\Rares\Edit.cshtml" />
+    <Content Include="Views\Uncommons\Delete.cshtml" />
+    <Content Include="Views\Uncommons\Details.cshtml" />
+    <Content Include="Views\Uncommons\Edit.cshtml" />
+    <Content Include="Views\VeryRares\Delete.cshtml" />
+    <Content Include="Views\VeryRares\Details.cshtml" />
+    <Content Include="Views\VeryRares\Edit.cshtml" />
+    <Content Include="Views\Wands\Create.cshtml" />
+    <Content Include="Views\Wands\Delete.cshtml" />
+    <Content Include="Views\Wands\Details.cshtml" />
+    <Content Include="Views\Wands\Edit.cshtml" />
+    <Content Include="Views\Wands\Index.cshtml" />
+    <Content Include="Views\WeaponOils\Create.cshtml" />
+    <Content Include="Views\WeaponOils\Delete.cshtml" />
+    <Content Include="Views\WeaponOils\Details.cshtml" />
+    <Content Include="Views\WeaponOils\Edit.cshtml" />
+    <Content Include="Views\WeaponOils\Index.cshtml" />
+    <Content Include="Views\VeryRares\Index.cshtml" />
+    <Content Include="Views\Rares\Index.cshtml" />
+    <Content Include="Views\Legendaries\Index.cshtml" />
+    <Content Include="Views\Uncommons\Index.cshtml" />
+    <Content Include="Views\Commons\Index.cshtml" />
+    <Content Include="Views\MagicItems\Create.cshtml" />
+    <Content Include="Views\MagicItems\Delete.cshtml" />
+    <Content Include="Views\MagicItems\Details.cshtml" />
+    <Content Include="Views\MagicItems\Edit.cshtml" />
+    <Content Include="Views\MagicItems\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Rarities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105080207186_InitialCreate.resx">
+      <DependentUpon>202105080207186_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091516158_MagicItemAddition.resx">
+      <DependentUpon>202105091516158_MagicItemAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091950087_DisplayNameAddition.resx">
+      <DependentUpon>202105091950087_DisplayNameAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105110223592_RarityName.resx">
+      <DependentUpon>202105110223592_RarityName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105110224481_RarityName1.resx">
+      <DependentUpon>202105110224481_RarityName1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105110338013_NameFix.resx">
+      <DependentUpon>202105110338013_NameFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105110343275_NameFixTwo-ConstructorAdded.resx">
+      <DependentUpon>202105110343275_NameFixTwo-ConstructorAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105110348425_NameFixes-AllItems.resx">
+      <DependentUpon>202105110348425_NameFixes-AllItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120320380_RarityNameAdd.resx">
+      <DependentUpon>202105120320380_RarityNameAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105150416278_TypeFix.resx">
+      <DependentUpon>202105150416278_TypeFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105161522387_AddNotes.resx">
+      <DependentUpon>202105161522387_AddNotes.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64449</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44365/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
